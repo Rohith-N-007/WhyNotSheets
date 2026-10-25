@@ -59,3 +59,13 @@ export type CheckResult =
       elapsedMs: number;
       message: string;
     };
+export type SolverWorkerRequest = {
+  id: string;
+  type: "check";
+  payload: CheckRequest;
+};
+
+export type SolverWorkerResponse = {
+  id: string;
+  result: CheckResult;
+};
